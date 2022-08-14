@@ -1,5 +1,5 @@
-import 'package:exercicios_semana_2/exercicios/exercicios.dart';
-import 'package:exercicios_semana_2/utils/utils.dart';
+import 'exercicios/exercicios.dart';
+import 'utils/utils.dart';
 
 void main(List<String> arguments) {
   int? option;
