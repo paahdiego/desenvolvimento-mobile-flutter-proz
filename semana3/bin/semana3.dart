@@ -6,12 +6,12 @@ void main(List<String> arguments) {
   );
 
   print(
-    """
-      Digite o tipo de cliente:
-      1. Cliente Comum
-      2. Funcionário
-      3. Vip
-      """,
+    """\n\n
+    Digite o tipo de cliente:
+    1. Cliente Comum
+    2. Funcionário
+    3. Vip
+    """,
   );
 
   final tipoDeCliente = receiveIntegerFromUser(
@@ -38,9 +38,10 @@ void main(List<String> arguments) {
 
   print(
     """
-      Tipo de cliente: ${clientTypeNameByNumber(tipoDeCliente)}
-      Valor Total: R\$ ${valorTotal.toStringAsFixed(2)}
-      Valor a pagar: R\$ ${(valorTotal * discountFactor).toStringAsFixed(2)} 
-      """,
+    Tipo de cliente: ${clientTypeNameByNumber(tipoDeCliente)}
+    Desconto: ${((1 - discountFactor) * 100).round()} %
+    Valor Total: R\$ ${valorTotal.toStringAsFixed(2)}
+    Valor a pagar: R\$ ${(valorTotal * discountFactor).toStringAsFixed(2)} 
+    """,
   );
 }
