@@ -1,6 +1,8 @@
+import 'fifth-exercice.dart';
 import 'first-exercice.dart';
 import 'second-exercice.dart';
 import 'third-exercice.dart';
+import 'fourth-exercice.dart';
 
 void callExerciceByGivenNumber(int option) {
   switch (option) {
@@ -11,9 +13,9 @@ void callExerciceByGivenNumber(int option) {
     case 3:
       return runThirdExercice();
     case 4:
-      return runFirstExercice();
+      return runForthExercice();
     case 5:
-      return runFirstExercice();
+      return runFifthExercice();
     case 6:
       return runFirstExercice();
     case 7:
@@ -46,8 +48,8 @@ Exercices Menu\n
 1. Compare two numbers
 2. Calculate total price by number of bought apples
 3. Check the type of given triangle
-4. 
-5. 
+4. Get the smallest and biggest number providing 3 numbers
+5. Get the total price to pay after fuel supply
 6. 
 7. 
 8. 

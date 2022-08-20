@@ -17,11 +17,13 @@ int receiveIntegerFromUser({
 
       if (number == null) {
         print(errorMessage);
-        continue;
-      }
-
-      if (start != null && end != null) {
-        if (number < start || number > end) {
+      } else {
+        if (start != null && number < start) {
+          number = null;
+          print(errorMessage);
+          continue;
+        }
+        if (end != null && number > end) {
           number = null;
           print(errorMessage);
         }
@@ -49,11 +51,13 @@ double receiveDoubleFromUser({
 
       if (number == null) {
         print(errorMessage);
-        continue;
-      }
-
-      if (start != null && end != null) {
-        if (number < start || number > end) {
+      } else {
+        if (start != null && number < start) {
+          number = null;
+          print(errorMessage);
+          continue;
+        }
+        if (end != null && number > end) {
           number = null;
           print(errorMessage);
         }
@@ -62,6 +66,37 @@ double receiveDoubleFromUser({
   }
 
   return number;
+}
+
+String receiveLetterFromUser({
+  String message = "provide a letter",
+  String? errorMessage = "provide a letter",
+  List<String>? filter,
+}) {
+  String? letter;
+
+  while (letter == null) {
+    print("\n$message");
+    String? userInput = stdin.readLineSync();
+
+    if (userInput != null) {
+      letter = userInput[0].toUpperCase();
+      if (!letter.contains(RegExp(r'[A-Z]'))) {
+        print(errorMessage);
+        letter = null;
+        continue;
+      }
+
+      if (filter != null) {
+        if (!filter.contains(letter)) {
+          print(errorMessage);
+          letter = null;
+        }
+      }
+    }
+  }
+
+  return letter;
 }
 
 void pauseApp({String message = "\n\npress enter to proceed..."}) {
