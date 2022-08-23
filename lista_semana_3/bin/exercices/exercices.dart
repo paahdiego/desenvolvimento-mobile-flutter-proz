@@ -1,6 +1,9 @@
+import 'eighth-exercice.dart';
 import 'fifth-exercice.dart';
 import 'first-exercice.dart';
 import 'second-exercice.dart';
+import 'seventh-exercice.dart';
+import 'sixth-exercice.dart';
 import 'third-exercice.dart';
 import 'fourth-exercice.dart';
 
@@ -17,11 +20,11 @@ void callExerciceByGivenNumber(int option) {
     case 5:
       return runFifthExercice();
     case 6:
-      return runFirstExercice();
+      return runSixthExercice();
     case 7:
-      return runFirstExercice();
+      return runSeventhExercice();
     case 8:
-      return runFirstExercice();
+      return runEighthExercice();
     case 9:
       return runFirstExercice();
     case 10:
@@ -50,8 +53,8 @@ Exercices Menu\n
 3. Check the type of given triangle
 4. Get the smallest and biggest number providing 3 numbers
 5. Get the total price to pay after fuel supply
-6. 
-7. 
+6. Get month name by its number
+7. Calculate your ideal weight
 8. 
 9. 
 10. 

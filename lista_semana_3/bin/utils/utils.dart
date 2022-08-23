@@ -75,6 +75,10 @@ String receiveLetterFromUser({
 }) {
   String? letter;
 
+  if (filter != null) {
+    filter = filter.map((element) => element.toUpperCase()).toList();
+  }
+
   while (letter == null) {
     print("\n$message");
     String? userInput = stdin.readLineSync();
