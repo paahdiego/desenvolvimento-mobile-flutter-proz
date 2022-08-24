@@ -4,7 +4,7 @@ int receiveIntegerFromUser({
   String message = "provide a int type number",
   int? start,
   int? end,
-  String? errorMessage = "provide a valid int number",
+  String errorMessage = "provide a valid int number",
 }) {
   int? number;
 
@@ -70,7 +70,7 @@ double receiveDoubleFromUser({
 
 String receiveLetterFromUser({
   String message = "provide a letter",
-  String? errorMessage = "provide a letter",
+  String errorMessage = "provide a letter",
   List<String>? filter,
 }) {
   String? letter;

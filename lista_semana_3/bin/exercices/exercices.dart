@@ -55,7 +55,7 @@ Exercices Menu\n
 5. Get the total price to pay after fuel supply
 6. Get month name by its number
 7. Calculate your ideal weight
-8. 
+8. Calculate purchase value with discount
 9. 
 10. 
 11. 
