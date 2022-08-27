@@ -7,22 +7,20 @@ void runEighthExercice() {
     errorMessage: "the total value must be positive",
   );
 
-  double discount = 0.00; // utilizar int
+  int discount = 0;
 
   if (cartValue > 500) {
     for (int counter = 500; counter < cartValue; counter += 100) {
-      discount += 0.01;
-      print(discount);
-      if (discount == 0.25) {
-        print("entrou aqui");
+      discount += 1;
+      if (discount == 25) {
         break;
-      } // precisa corrigir
+      }
     }
   }
 
   print("The purchase total value is: R\$ ${cartValue.toStringAsFixed(2)}");
-  print("The total discount is: ${(discount * 100).toStringAsFixed(2)} %");
+  print("The total discount is: ${(discount).toStringAsFixed(2)} %");
   print(
-    "The value with discount is: R\$ ${(cartValue * (1 - discount)).toStringAsFixed(2)}",
+    "The value with discount is: R\$ ${(cartValue * (1 - (discount / 100.0))).toStringAsFixed(2)}",
   );
 }
