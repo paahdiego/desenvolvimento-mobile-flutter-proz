@@ -38,7 +38,7 @@ double receiveDoubleFromUser({
   String message = "provide a double type number",
   double? start,
   double? end,
-  String? errorMessage = "provide a double int number",
+  String errorMessage = "provide a double int number",
 }) {
   double? number;
 
