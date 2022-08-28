@@ -1,6 +1,7 @@
 import 'eighth-exercice.dart';
 import 'fifth-exercice.dart';
 import 'first-exercice.dart';
+import 'ninth-exercice.dart';
 import 'second-exercice.dart';
 import 'seventh-exercice.dart';
 import 'sixth-exercice.dart';
@@ -26,7 +27,7 @@ void callExerciceByGivenNumber(int option) {
     case 8:
       return runEighthExercice();
     case 9:
-      return runFirstExercice();
+      return runNinthExercice();
     case 10:
       return runFirstExercice();
     case 11:
@@ -56,7 +57,7 @@ Exercices Menu\n
 6. Get month name by its number
 7. Calculate your ideal weight
 8. Calculate purchase value with discount
-9. 
+9. Get ages above eighteen
 10. 
 11. 
 12. 
