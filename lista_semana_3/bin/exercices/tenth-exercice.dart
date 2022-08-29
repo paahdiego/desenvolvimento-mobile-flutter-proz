@@ -18,15 +18,19 @@ void runTenthExercice() {
   final aboveSixty = <int>[];
 
   tillFifteenAges.addAll(ages.where((age) => age <= 15).toList());
+
   betweenSixteenAndThirty.addAll(
-    ages.where((age) => age > 15 || age <= 30).toList(),
+    ages.where((age) => age > 15 && age <= 30).toList(),
   );
+
   betweenThirtyOneAndFourtyFive.addAll(
-    ages.where((age) => age > 30 || age <= 45).toList(),
+    ages.where((age) => age > 30 && age <= 45).toList(),
   );
+
   betweenFourtySixAndSixty.addAll(
-    ages.where((age) => age > 45 || age <= 60).toList(),
+    ages.where((age) => age > 45 && age <= 60).toList(),
   );
+
   aboveSixty.addAll(
     ages.where((age) => age > 60).toList(),
   );
@@ -36,34 +40,45 @@ void runTenthExercice() {
     print("${getOrdinalNumberByInt(ages.indexOf(age) + 1)}) $age years.");
   }
 
-  print("\nages before fifteen: ");
+  print("\ntotal ages: ${ages.length}");
+
+  print("\nages till 15: ");
   for (final age in tillFifteenAges) {
     print(
       "${getOrdinalNumberByInt(tillFifteenAges.indexOf(age) + 1)}) $age years.",
     );
   }
-  print("\nages between sixteen and thirty years: ");
+  print("\nages between 16 and 30 years: ");
   for (final age in betweenSixteenAndThirty) {
     print(
       "${getOrdinalNumberByInt(betweenSixteenAndThirty.indexOf(age) + 1)}) $age years.",
     );
   }
-  print("\nages before fifteen: ");
-  for (final age in tillFifteenAges) {
+  print("\nages between 31 and 45: ");
+  for (final age in betweenThirtyOneAndFourtyFive) {
     print(
       "${getOrdinalNumberByInt(tillFifteenAges.indexOf(age) + 1)}) $age years.",
     );
   }
-  print("\nages before fifteen: ");
-  for (final age in tillFifteenAges) {
+  print("\nages between 46 and 60: ");
+  for (final age in betweenFourtySixAndSixty) {
     print(
       "${getOrdinalNumberByInt(tillFifteenAges.indexOf(age) + 1)}) $age years.",
     );
   }
-  print("\nages before fifteen: ");
-  for (final age in tillFifteenAges) {
+  print("\nages above 60: ");
+  for (final age in aboveSixty) {
     print(
       "${getOrdinalNumberByInt(tillFifteenAges.indexOf(age) + 1)}) $age years.",
     );
   }
+  int total = 0;
+  total+= tillFifteenAges.length;
+  total+= betweenSixteenAndThirty.length;
+  total+= betweenThirtyOneAndFourtyFive.length;
+  total+= betweenFourtySixAndSixty.length;
+  total+= aboveSixty.length;
+
+  print(total);
+
 }
