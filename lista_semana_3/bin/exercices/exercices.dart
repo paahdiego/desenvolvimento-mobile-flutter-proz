@@ -7,6 +7,7 @@ import 'seventh-exercice.dart';
 import 'sixth-exercice.dart';
 import 'third-exercice.dart';
 import 'fourth-exercice.dart';
+import 'tenth-exercice.dart';
 
 void callExerciceByGivenNumber(int option) {
   switch (option) {
@@ -29,7 +30,7 @@ void callExerciceByGivenNumber(int option) {
     case 9:
       return runNinthExercice();
     case 10:
-      return runFirstExercice();
+      return runTenthExercice();
     case 11:
       return runFirstExercice();
     case 12:
@@ -58,7 +59,7 @@ Exercices Menu\n
 7. Calculate your ideal weight
 8. Calculate purchase value with discount
 9. Get ages above eighteen
-10. 
+10. Get ages range and percentage 
 11. 
 12. 
 13. 
