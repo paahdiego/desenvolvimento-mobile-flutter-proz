@@ -1,4 +1,6 @@
+import 'package:desafio_dart/models/address.dart';
 import 'package:desafio_dart/models/company.dart';
+import 'package:desafio_dart/models/person.dart';
 import 'package:uuid/uuid.dart';
 
 import '../models/company.dart';
@@ -8,12 +10,23 @@ class CompanyRepository {
 
   final uuid = Uuid();
 
+  static CompanyRepository? _instance;
+
+  static CompanyRepository getInstance() {
+    if (_instance == null) {
+      CompanyRepository._instance = CompanyRepository();
+    }
+
+    return CompanyRepository._instance!;
+  }
+
   Company create({
     required String fantasyName,
     required String corporateName,
     required String cnpj,
-    required String addressId,
     required String phone,
+    required Address address,
+    required Person partner,
   }) {
     final company = Company(
       createdAt: DateTime.now(),
@@ -21,8 +34,9 @@ class CompanyRepository {
       fantasyName: fantasyName,
       corporateName: corporateName,
       cnpj: cnpj,
-      addressId: addressId,
+      address: address,
       phone: phone,
+      partner: partner,
     );
 
     _companies.add(company);

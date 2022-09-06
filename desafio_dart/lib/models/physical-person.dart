@@ -1,15 +1,15 @@
-import 'package:desafio_dart/models/object-id.dart';
+import 'package:desafio_dart/models/person.dart';
 
-class PhysicalPerson extends ObjectId {
+class PhysicalPerson extends Person {
   final String name;
   final String cpf;
-  final String addressId;
 
   PhysicalPerson({
     required super.id,
     required this.name,
     required this.cpf,
-    required this.addressId,
+    required super.address,
+    required super.type,
     required super.createdAt,
   });
 }

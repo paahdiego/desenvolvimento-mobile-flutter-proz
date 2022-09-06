@@ -1,4 +1,6 @@
+import 'package:desafio_dart/models/address.dart';
 import 'package:desafio_dart/models/legal-person.dart';
+import 'package:desafio_dart/models/person.dart';
 import 'package:uuid/uuid.dart';
 
 class LegalPersonRepository {
@@ -6,11 +8,21 @@ class LegalPersonRepository {
 
   final uuid = Uuid();
 
+  static LegalPersonRepository? _instance;
+
+  static LegalPersonRepository getInstance() {
+    if (_instance == null) {
+      LegalPersonRepository._instance = LegalPersonRepository();
+    }
+
+    return LegalPersonRepository._instance!;
+  }
+
   LegalPerson create({
     required String fantasyName,
     required String corporateName,
     required String cnpj,
-    required String addressId,
+    required Address address,
     required String phone,
   }) {
     final legalPerson = LegalPerson(
@@ -19,7 +31,8 @@ class LegalPersonRepository {
       fantasyName: fantasyName,
       corporateName: corporateName,
       cnpj: cnpj,
-      addressId: addressId,
+      address: address,
+      type: PersonType.legal,
     );
 
     _legalPeople.add(legalPerson);

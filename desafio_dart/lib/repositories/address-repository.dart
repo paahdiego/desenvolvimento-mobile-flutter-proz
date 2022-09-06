@@ -4,6 +4,16 @@ import 'package:uuid/uuid.dart';
 class AddressRepository {
   final _addresses = <Address>[];
 
+  static AddressRepository? _instance;
+
+  static AddressRepository getInstance() {
+    if (_instance == null) {
+      AddressRepository._instance = AddressRepository();
+    }
+
+    return AddressRepository._instance!;
+  }
+
   final uuid = Uuid();
 
   Address create({
