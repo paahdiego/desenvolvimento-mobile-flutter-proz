@@ -35,43 +35,6 @@ void runTenthExercice() {
     ages.where((age) => age > 60).toList(),
   );
 
-  print("\nages provided: ");
-  for (final age in ages) {
-    print("${getOrdinalNumberByInt(ages.indexOf(age) + 1)}) $age years.");
-  }
-
-  print("\ntotal ages: ${ages.length}");
-
-  print("\nages till 15: ");
-  for (final age in tillFifteenAges) {
-    print(
-      "${getOrdinalNumberByInt(tillFifteenAges.indexOf(age) + 1)}) $age years.",
-    );
-  }
-  print("\nages between 16 and 30 years: ");
-  for (final age in betweenSixteenAndThirty) {
-    print(
-      "${getOrdinalNumberByInt(betweenSixteenAndThirty.indexOf(age) + 1)}) $age years.",
-    );
-  }
-  print("\nages between 31 and 45: ");
-  for (final age in betweenThirtyOneAndFourtyFive) {
-    print(
-      "${getOrdinalNumberByInt(tillFifteenAges.indexOf(age) + 1)}) $age years.",
-    );
-  }
-  print("\nages between 46 and 60: ");
-  for (final age in betweenFourtySixAndSixty) {
-    print(
-      "${getOrdinalNumberByInt(tillFifteenAges.indexOf(age) + 1)}) $age years.",
-    );
-  }
-  print("\nages above 60: ");
-  for (final age in aboveSixty) {
-    print(
-      "${getOrdinalNumberByInt(tillFifteenAges.indexOf(age) + 1)}) $age years.",
-    );
-  }
   int total = 0;
   total+= tillFifteenAges.length;
   total+= betweenSixteenAndThirty.length;
@@ -79,6 +42,32 @@ void runTenthExercice() {
   total+= betweenFourtySixAndSixty.length;
   total+= aboveSixty.length;
 
-  print(total);
+  print("\nages provided: ");
+  for (final age in ages) {
+    print("${getOrdinalNumberByInt(ages.indexOf(age) + 1)}) $age years.");
+  }
+
+  print("\ntotal ages: ${ages.length}");
+
+  print("\nages till 15: ${tillFifteenAges.length} - ${((tillFifteenAges.length/total.toDouble()) * 100.00).toStringAsFixed(2)}%");
+  for (final age in tillFifteenAges) {
+    print("$age years.",);
+  }
+  print("\nages between 16 and 30 years: ${betweenSixteenAndThirty.length} - ${(betweenSixteenAndThirty.length/total.toDouble()) * 100.00}%");
+  for (final age in betweenSixteenAndThirty) {
+    print("$age years.");
+  }
+  print("\nages between 31 and 45: ${betweenThirtyOneAndFourtyFive.length} - ${(betweenThirtyOneAndFourtyFive.length/total.toDouble()) * 100.00}%");
+  for (final age in betweenThirtyOneAndFourtyFive) {
+    print("$age years.",);
+  }
+  print("\nages between 46 and 60: ${betweenFourtySixAndSixty.length} - ${(betweenFourtySixAndSixty.length/total.toDouble()) * 100.00}%");
+  for (final age in betweenFourtySixAndSixty) {
+    print("$age years.",);
+  }
+  print("\nages above 60: ${aboveSixty.length} - ${(aboveSixty.length/total.toDouble()) * 100.00}%");
+  for (final age in aboveSixty) {
+    print("$age years.");
+  }
 
 }
